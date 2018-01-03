@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.connection.datasource">java:comp/env/jdbc/grocery</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="show_sql">true</property>
+		<!--mapping class="gov.jhnd.health.app.pojo.Address" />
+		<mapping class="gov.jhnd.health.app.pojo.BirthDetail" />
+		<mapping class="gov.jhnd.health.app.pojo.DeathDetail" />
+		<mapping class="gov.jhnd.health.app.pojo.Document" />
+		<mapping class="gov.jhnd.health.app.pojo.NotificationArea" />
+		<mapping class="gov.jhnd.health.app.pojo.NotificationAreaUser" />
+		<mapping class="gov.jhnd.health.app.pojo.Person" />
+		<mapping class="gov.jhnd.health.app.pojo.Registration" />
+		<mapping class="gov.jhnd.health.app.pojo.Request" />
+		<mapping class="gov.jhnd.health.app.pojo.RequestStatus" />
+		<mapping class="gov.jhnd.health.app.pojo.User" /-->
+		<mapping class="org.arysrl.app.grocery.module.login.User" />
+	</session-factory>
+</hibernate-configuration>
