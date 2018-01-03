@@ -22,4 +22,16 @@ ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that 
 mysql> CREATE USER 'batch'@'grocery' IDENTIFIED BY 'India@123';
 Query OK, 0 rows affected (0.00 sec)
 
+mysql> use mysql
+Database changed
+mysql> INSERT INTO db
+    ->         (Host,Db,User,Select_priv,Insert_priv,
+    ->          Update_priv,Delete_priv,Create_priv,Drop_priv)
+    ->          VALUES('localhost','grocery','batch',
+    ->          'Y','Y','Y','Y','Y','Y');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.00 sec)
+
 mysql>
